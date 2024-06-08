@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>编程教程</title> 
+    <!-- 
+        <meta property="og:url" content=""> 
+        <meta property="og:type" content="website">
+        <meta property="og:image:width" content="1024">
+        <meta property="og:image:height" content="512">
+        <meta property="og:image" content="image.jpg">
+        <meta property="og:title" content="Tutorials">
+        <meta property="og:description" content="">
+    -->
+    <style>
+        @import url("./tutorial.css");
+    </style>
+</head>
+
+<body>
+    <main>
+        <article>
+            <header>
+                <h1>编程语言入门</h1>
+                <ul>
+                    <li>机器语言(Machine Language)</li>
+                    <li>汇编语言(Assembly Language)</li>
+                    <li>高级语言(High-level Languages)</li>
+                    <li>规则、最佳实践和警告(Rules, Best practices, and warning)</li>
+                </ul>
+            </header>
+            <p>
+                现代计算机的速度快得令人难以置信，而且还在不断加快。<!--
+                -->然而，计算机也有一些重要的限制: 它们只能理解一组有限的命令，并且必须准确地告诉它们要做什么。
+            </p>
+            <p > 
+                计算机程序（也通常称为<strong>应用程序</strong>）是计算机为了完成某些任务而可以执行的一组指令。创建程序的过程称为<strong>编程</strong>。<!--
+                -->程序员通常通过生成<strong>源代码</strong>（通常缩写为<strong>代码(code)</strong>）来创建程序，源代码是一个或多个文本文件中的内容。
+            </p>
+            <p> 
+                组成计算机并执行程序的物理计算机部件的集合称为<strong>硬件</strong>。<!--
+                -->当计算机程序加载到内存中，硬件顺序执行每条指令时，这称为<strong>运行</strong>或<strong>执行</strong>程序。
+            </p>
+            <section>
+                <h2 id = "1">1.机器语言</h2>
+                <p>
+                    计算机的 <u><hover title = "Central Processing Unit （中央处理器）">CPU</hover></u> 无法识别 C++。<!--
+                    -->CPU 可以直接理解的有限指令集称为<strong>机器代码</strong>（或<strong>机器语言</strong>或<strong>指令集</strong>）。<!--
+                    -->这是机器语言指令示例:<code>10110000 01100001</code>
+                </p>
+                <p>
+                    在计算机刚发明的时候，程序员必须直接用机器语言编写程序，这是一件非常困难且耗时的事情。
+                </p>
+                <p>
+                    这些指令的组织方式超出了教程范围，但有两点值得注意。<!--
+                    -->首先，每条指令都由 1 和 0 的序列组成。每个单独的 0 或 1 称为一个<strong>二进制数字</strong>，简称<strong>位/比特(bit)</strong>。<!--
+                    -->组成单个命令的位数各不相同，例如: 有些 CPU 处理的指令始终是 32 位长，而其他一些 CPU（例如您可能正在使用的 x86/x64 系列）的指令可以是一个可变长度。
+                </p>
+                <p>
+                    其次，每组二进制数字被 CPU 解释为一个命令，以完成一个非常具体的工作，例如<i>比较这两个数字</i>，或者将此数字放入该内存位置。<!--
+                    -->但是，由于不同的 CPU 具有不同的指令集，CPU 类型编写的指令在指令集不同的情况下无法使用。<!--
+                    -->这意味着程序在不进行大量重写的情况下是无法移植到不同类型的系统运行。
+                </p>
+            </section>
+            <section>
+                <h2 id = "2">2.汇编语言</h2>
+                <p>
+                    因为机器语言对人类来说很难阅读和理解，所以人们发明了汇编语言。<!--
+                    -->在汇编语言中，每条指令都由一个简短的缩写（而不是一组比特）标识，可以使用名称和其他数字。
+                </p>
+                <p>
+                    下面是与上述汇编语言相同的指令:<code>mov al, 061h</code>
+                </p>
+                <p>
+                    这使得汇编比机器语言更容易读和写。然而，CPU 并不能直接理解汇编语言。<!--
+                    -->相反，汇编程序必须先被翻译成机器语言，然后才能被计算机执行。<!--
+                    -->这是通过使用一种称为<strong>汇编程序(assembler)</strong>的程序来完成的。<!--
+                    -->汇编语言编写的程序往往非常快，在速度至关重要的情况下，汇编至今仍在使用。
+                </p>
+                <p>
+                    然而，汇编仍然有一些缺点。首先，汇编语言仍然需要大量指令来完成即使是简单的任务。<!--
+                    -->虽然每个指令本身在某种程度上是人类可读的，<!--
+                    -->但理解整个程序在做什么可能是具有挑战性的（这有点像在英文中试图通过单独查看每个字母来理解一个句子）。<!--
+                    -->其次，汇编语言的可移植性仍然不强。<!--
+                    -->为一个 CPU 编写的汇编程序可能无法在使用不同指令集的硬件上工作，必须重写或大量修改。
+                </p>
+            </section>
+            <section>
+                <h2 id = "3">3.高级语言</h2>
+                <p>
+                    为了解决可读性和可移植性问题，新的编程语言，如 C、C++、Pascal(以及后来的 Java、Javascript 和 Perl)被开发出来。<!--
+                    -->这些语言被称为<strong>高级语言</strong>，因为它们被设计成允许程序员编写程序，而不必担心程序将在哪种计算机上运行。
+                </p>
+                <p>
+                    下面是 C/C++ 中相同的指令:<code>a = 97</code>;
+                </p>
+                <p>
+                    就像汇编程序一样，用高级语言编写的程序在运行之前必须转换成计算机能够理解的格式。主要有两种方法: 编译和解释。
+                </p>
+                <p>
+                    <strong>编译器(compiler)</strong>是一种程序，它读取源代码并产生一个独立的可执行程序，然后可以运行。<!--
+                    -->一旦代码变成可执行文件，就不需要编译器来运行程序了。起初，编译器是原始的，产生缓慢的、未优化的代码。<!--
+                    -->然而，多年来，编译器已经变得非常擅长生成快速、优化的代码，在某些情况下，它可以比人类使用汇编语言做得更好!
+                </p>
+                <figure>
+                    <img src="Compiling Process.jpg">
+                    <figcaption>编译过程的简化表示</figcaption>
+                </figure>
+                <p>
+                    由于 C++ 程序通常是编译的，我们稍后将更详细地探讨编译器。
+                </p>
+                <p>
+                    <strong>解释器(interpreter)</strong>是一种程序，它直接执行源代码中的指令，而不需要先将它们编译成可执行文件。<!--
+                    -->解释器往往比编译器更灵活，但在运行程序时效率较低，因为每次程序运行时都需要执行解释过程。<!--
+                    -->这也意味着每次程序运行时都需要解释器。
+                </p>
+                <figure>
+                    <img src="Interpretation Process.jpg">
+                    <figcaption>解释过程的简化表示</figcaption>
+                </figure>
+                <div class="note lightgraybackground">
+                    <p class="note-title bottomline">可选的阅读</p>
+                    <p>你可以在<a href="https://stackoverflow.com/a/38491646">这里</a>找到编译器与解释器优势的一个很好的比较。</p>
+                    <p>编译程序的另一个优点是，发布编译后的程序不需要发布源代码。在非开源环境中，这对于知识产权保护非常重要。</p>
+                </div>
+                <p>
+                    大多数语言都可以编译或解释，然而，传统的语言，如 C、C++ 和 Pascal 是编译的，<!--
+                    -->而"脚本"语言，如 Perl 和 Javascript 倾向于解释。有些语言，如 Java，混合使用这两者。
+                </p>
+                <p>
+                    高级语言有许多令人满意的特性。
+                </p>
+                <p>
+                    首先，高级语言更容易读和写，因为命令更接近我们每天使用的自然语言。<!--
+                    -->其次，与低级语言相比，高级语言执行相同的任务需要更少的指令，这使得程序更简洁，更容易理解。<!--
+                    -->在 C++ 中，你可以这样做:<code>a = b * 2 + 5;</code>一条指令。在汇编语言中，这将需要 5 或 6 条不同的指令。
+                </p>
+                <p>
+                    第三，程序可以为许多不同的系统编译(或解释)，你不需要更改程序以在不同的 CPU 上运行（你只需要为该 CPU 重新编译）
+                </p>
+                <figure>
+                    <img src="Compilation Example.jpg">
+                    <figcaption>示例</figcaption>
+                </figure>
+                <p>
+                    一般来说，可移植性有两个例外。
+                </p>
+                <p>
+                    首先，许多操作系统（如 Microsoft Windows）都包含特定于平台的功能，可以在代码中使用这些功能。<!--
+                    -->这可以使针对特定操作系统编写程序变得更容易，但以可移植性为代价。<!--
+                    -->在这些教程中，我们将避免任何平台特定的代码。
+                </p>
+                <p>
+                    其次，有些编译器还支持编译器特定的扩展——如果使用了这些扩展，那么不经过修改，<!--
+                    -->你的程序就无法被不支持相同扩展的其他编译器编译。我们将在后面详细讨论这些。
+                </p>
+            </section>
+            <section>
+                <h2 id = "4">4.规则、最佳实践和警告</h2>
+                <p>随着我们继续学习这些教程，我们将强调以下三类中的许多要点:</p>
+                <div class="note lightbluebackground">
+                    <p class="note-title bottomline">规则</p>
+                    <p>规则是你必须按照语言要求去编写指令。不遵守规则通常会导致程序无法运行。</p>
+                </div>
+                <div class="note lightgreenbackground">
+
+                    <p class="note-title bottomline">最佳实践</p>
+                    <p>
+                        最佳实践是你应该做的事情，因为这种做法要么是传统的（习惯用语），要么是被推荐的。<!--
+                     -->也就是说，要么每个人都这样做（如果你不这样做，那么其他人很可能不知道，这样你很难得到他人的帮助），要么它优于其他选择。
+                    </p>
+                </div>
+                <div class="note lightredbackground">
+                    <p class="note-title bottomline">警告</p>
+                    <p>警告是你不应该做的事情，因为它们通常会导致意想不到的结果。</p>
+                </div>
+            </section>
+            <section>
+                <div class = "prevnext-inline">
+                    <div class="nav-button nav-button-next">
+                        <div class="nav-button-text">
+                            <div class="nav-button-title">下一节</div>
+                            <div class="nav-button-lesson">
+                                <span class="nav-button-lesson-number">0.3</span>C/C++ 入门
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-button">
+                        <div class="nav-button-text">
+                            <div class="nav-button-title">回到目录</div>
+                        </div>
+                    </div>
+                    <div class="nav-button nav-button-prev">
+                        <div class="nav-button-text">
+                            <div class="nav-button-title">上一节</div>
+                            <div class="nav-button-lesson">
+                                <span class="nav-button-lesson-number">0.1</span>教程介绍
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article> 
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>
