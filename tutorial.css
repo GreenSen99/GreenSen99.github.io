@@ -1,0 +1,189 @@
+
+
+body {
+    /* 设置背景颜色 */
+	background-color: #eee;
+    /* 设置元素的文本以及文本装饰的前景色颜色值，并设置 currentcolor 值 */
+	color: #000000;
+	font: 18px "Courier New";
+    /* 设置元素的文本的每行之间的间距 */
+	letter-spacing: 0.5px;
+	line-height: 1.5em;
+    /* 上右下左 的距离 */
+	margin: 0;
+	padding: 0;
+	counter-reset: h2
+}
+
+/* 修饰 html 中的 ‘article’ 的标记的风格 */
+article {
+	background-color: #fafafa;
+	box-sizing: border-box;
+	padding: 1em;
+	margin: 1em auto;
+	max-width: 800px
+}
+
+/* 修饰 html 中的 ‘article 包裹中 header 下 h1’ 的标记的风格 */
+article header h1 {
+	display: inline-block;
+	font-size: 30px;
+	margin: 0.5em 0 0 0;
+}
+
+article header p {
+	display: inline-block;
+	font-weight: 700;
+	margin: 0 0 0 .5em
+}
+
+article header ul {
+	font-style: italic;
+	list-style-type: none;
+	margin: 1em;
+	padding: 0
+}
+
+article header ul li {
+	margin: 0;
+	padding: 0
+}
+
+article p {
+	margin: 0.5em 0;
+}
+
+article strong {
+	font-size: 18px;
+}
+
+article section h2 {
+	font-size: 20px;
+	margin: 0.5em 0 0.5em
+}
+
+code {
+	background-color: #e6e6e6;
+    padding: 1px 4px;
+    border-radius: 4px;
+    box-shadow: 0 1px #d4d4d4;
+	font: 18px "Courier";
+	border-radius: 4px;
+}
+
+a {
+    color: #365da0;
+}
+
+figure {
+	text-align: center;
+	display: block;
+	margin: 2em auto;
+	padding: 0
+}
+
+figcaption {
+	font-size: 16px;
+	font-style: italic
+}
+
+.prevnext-inline {
+    display: inline-block;
+    min-width: 400px;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+.nav-button {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    padding: 12px;
+    padding-right: 15px;
+    border-radius: 8px;
+    background: #ddd;
+    cursor: pointer;
+    transition: .1s all;
+}
+
+.nav-button-text {
+	margin-top: 2px;
+}
+
+.nav-button:hover{
+	background-color: #888;
+}
+
+.nav-button-title {
+    margin-bottom: 2px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+	margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.nav-button-lesson {
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 4px;
+}
+
+.nav-button-lesson-number {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 0 5px;
+    line-height: 24px;
+    border-radius: 4px;
+	margin-top: 1px;
+    background-color: #c2c2c2;
+}
+
+.note {
+	font-size: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #999;
+    margin: 1em 0;
+    overflow: hidden;
+    clear: both;
+    border-radius: 8px;
+    padding: 0 14px;
+}
+
+.lightgraybackground {
+    background-color: #ddd;
+    border: 2px solid #c7c7c7;
+    box-shadow: 0 2px #c7c7c7;
+}
+
+.lightbluebackground {
+    background-color: rgb(195, 216, 255);
+    border: 2px solid rgb(175, 203, 255);
+    box-shadow: 0 2px rgb(172, 201, 255);
+}
+
+.lightgreenbackground {
+    background-color: #e0ffe3;
+    border: 2px solid #d1ffd6;
+    box-shadow: 0 2px #d3ffd7;
+}
+
+.lightredbackground {
+    background-color: #ffdada;
+    border: 2px solid #ffd0d0;
+    box-shadow: 0 2px #ffc8c8;
+}
+
+.bottomline {
+    border-bottom: none;
+    font-size: 1.2em;
+    padding-bottom: 0;
+    padding-top: 5px;
+}
+
+.note-title {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
