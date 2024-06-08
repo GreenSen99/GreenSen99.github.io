@@ -1,1 +1,66 @@
+<!DOCTYPE html>
 
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>编程教程</title> 
+    <!-- 
+        <meta property="og:url" content=""> 
+        <meta property="og:type" content="website">
+        <meta property="og:image:width" content="1024">
+        <meta property="og:image:height" content="512">
+        <meta property="og:image" content="image.jpg">
+        <meta property="og:title" content="Tutorials">
+        <meta property="og:description" content="">
+    -->
+    <style>
+        @import url("./tutorial.css");
+    </style>
+</head>
+
+<body>
+    <main>
+        <article>
+            <header>
+                <h1>教程介绍</h1>
+                <ul>
+                    <li>课程结构(Lesson structure)</li>
+                    <li>目标(Goals)</li>
+                    <li>充分利用这些教程(Getting the most out of these tutorials)</li>
+                </ul>
+            </header>
+            <p>
+                欢迎来到学习 C++ 教程！这些教程旨在使学习 C++ 变得简单。
+            </p>
+            <p>
+                与许多其他网站和书籍不同，这些教程不需要你有任何编程经验。随着你的进步，我们将教你需要知道的一切，一路上有很多例子。
+            </p>
+            <p>
+                无论你是出于兴趣学习 C++ 还是为了职业发展，你都来对地方了!
+            </p>
+            <section>
+                <h2 id = "1">1.课程结构</h2>
+                <p>
+                    这一章的目的是让你了解 C++ 是什么、它是如何产生的、程序是如何工作的，以及创建自己的程序需要安装哪些软件。你甚至会编写自己的第一个程序。
+                </p>
+                <P>
+                    后续章节将探讨 C++ 语言的不同部分。在第 1 章中，你将对许多基本的 C++ 概念进行广泛而浅层的认识，这样我们就可以开始编写一些简单的程序。<!--
+                    -->之后会深入探讨这些概念，或者介绍一些新概念。
+                </P>
+                <P>
+                    每一章都有一个主题，下面的所有章节通常都与该主题相关。没有强制需要在每一课或每一章上花多少时间, 以你觉得舒服的速度学习。
+                </P>
+            </section>
+            <section>
+                <h2 id = "2">2.目标</h2>
+                <p>
+                    在开始之前，让我们介绍一下这些教程的几个重要目标:
+                </p>
+        </article> 
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>
